@@ -235,26 +235,26 @@ router.post('/exercicio19', function (req, res) {
         3: 'Engenharia Civil'
     };
     
-    const numAlunosPorCurso = [0, 0, 0];
-    const numAlunosIdade20a25PorCurso = [0, 0, 0];
+    const numAlunosPorCurso = [0, 0, 0]
+    const numAlunosIdade20a25PorCurso = [0, 0, 0]
     let totalIdade20a25 = 0;
-    let menorMediaIdadeCurso = Infinity;
-    let cursoMenorMediaIdade = '';
+    let menorMediaIdadeCurso = Infinity
+    let cursoMenorMediaIdade = ''
     
     for (let i = 0; i < alunos.length; i++) {
         const curso = alunos[i].curso;
         const idade = alunos[i].idade;
         
-        numAlunosPorCurso[curso - 1]++;
+        numAlunosPorCurso[curso - 1]++
         
         if (idade >= 20 && idade <= 25) {
             numAlunosIdade20a25PorCurso[curso - 1]++;
-            totalIdade20a25++;
+            totalIdade20a25++
         }
         
         if (idade < menorMediaIdadeCurso) {
             menorMediaIdadeCurso = idade;
-            cursoMenorMediaIdade = cursos[curso];
+            cursoMenorMediaIdade = cursos[curso]
         }
     }
     
